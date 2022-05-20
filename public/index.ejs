@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/stylesheet.css"/>
+
+    <title>WhiteBoard IO</title>
+  </head>
+ 
+  <body>
+  	
+  	<header>
+	  	<div class="d-flex flex-row justify-content-around align-items-center header-bg text-light mb-5">
+	  		<img src="assets/wb-explain2.png"/>
+	    	<h1 class="display-1 lead">WhiteBoard IO</h1>
+		    <img src="assets/test.png"/>
+		    <a class="login-link btn btn-outline-light align-top" href="login.html">Login</a>
+		   	<a class="register-link btn btn-outline-light" href="register.html">Register</a>
+	    </div>
+	</header>
+   	
+   	<hr class="mb-5 hr">
+
+   	<div class="d-flex justify-content-around flex-row-reverse align-items-center">
+   		<div class="flex-column" >
+   		<canvas class="canvas" id="canvas" width="700" height="500"></canvas>
+	   		<div class="d-flex flex-row justify-content-around flex-row-reverse align-items-center">
+				  <button class="flex-column btn btn-dark" onclick='changeColor("black")'>Black</button>
+				  <button class="flex-column btn btn-primary" onclick='changeColor("blue")'>Blue</button>
+				  <button class="flex-column btn btn-danger" onclick='changeColor("red")'>Red</button>
+				  <input  class="flex-column" onchange='changeWidth(this.value)' type="range" min="1" max="10" value="2" />
+				  <button class="flex-column btn" onclick='resetCanvas()'>Reset</button>
+				  <button class="flex-column btn btn-outline-dark" onclick='erase()'>Eraser</button>
+	   	  </div>
+   	</div>
+
+
+   		<div class="flex-column">
+   		<p class="font-weight-bold">
+			Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+			You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+			You can return the answer in any order.
+			Example 1:
+			Input: nums = [2,7,11,15], target = 9
+			Output: [0,1]
+			Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+			Example 2:
+
+			Input: nums = [3,2,4], target = 6
+			Output: [1,2]
+			Example 3:
+
+			Input: nums = [3,3], target = 6
+			Output: [0,1]
+			Constraints:
+			2 <= nums.length <= 104
+			-109 <= nums[i] <= 109
+			-109 <= target <= 109
+			Only one valid answer exists.
+   		</p>
+   		</div>
+
+   	</div>
+   		<h1>CRUD API Tester</h1>
+		<hr>
+		<button onclick=testCreate() > Register </button>
+		<input type="text" id="name" placeholder="name">
+		<input type="email" id="createEmail" placeholder="email">
+		<input type="password"  id="createPassword" placeholder="password">
+		<hr>		
+
+		<button onclick=testReadAll() >READ ALL</button>
+		<hr>
+
+		<button onclick=testRead()> Read Id </button>
+		<input type="text" id="readId" placeholder="id">
+		<hr>
+
+		<button onclick=testUpdate() > Update </button>
+		<input type="text" id="updateId" placeholder="id">
+		<input type="email" id="updateEmail" placeholder="email">
+		<input type="text" id="updatePassword" placeholder="password">
+		<hr>
+
+		<button onclick=testDelete()> DELETE </button>
+		<input type="text" id="deleteId" placeholder="id">
+		<hr>
+
+		<h1>JWT Auth Tester</h1>
+		<hr>
+
+		<button onclick=Login()> LOGIN </button>
+		<input type="email" id="loginId" placeholder="email">
+		<input type="password" id="loginPassword" placeholder="password">
+		<hr>
+
+		<button onclick=testAuth()> Special</button>
+		<hr>
+
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+		<script src="scripts/api-tester.js"></script>
+   		<script src="scripts/canvas.js"></script>
+	
+	</body>
+</html>

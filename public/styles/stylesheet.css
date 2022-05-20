@@ -1,0 +1,42 @@
+.header-bg{
+	background-color: #263238;
+}
+
+.canvas{
+	border:  2px solid black;
+}
+
+hr {
+    background-color: #607D8B; height: 1px; border: 0;
+}
+
+div {
+    white-space: pre-line;
+}
+
+.body-bg{
+		background-color: #263238;
+}
+
+.login-link{
+	margin-bottom: 5em;
+	margin-left: 10em;
+}
+
+.register-link{
+	margin-bottom: 5em;
+	margin-right: ;
+}
+
+@media (max-width: 575.98px) {
+.wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center !important;
+	}
+.ul {
+	margin-top: 1.5em;	
+    margin-bottom: 1.5em;	
+
+}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "crud-app",
+	"version": "1.0.0",
+	"description": "App that connects mongoos client to mongodb server for CRUD ops plus JWT auth",
+	"author": "Roy Perez",
+	"main": "app.js",
+	"scripts": {
+		"start": "npm install && node app"
+	},
+	"dependencies": {
+		"body-parser": "^1.20.0",
+		"express": "*",
+		"ejs": "*",
+		"jsonwebtoken": "^8.5.1",
+		"mongoose": "^6.3.2"
+	}
+}
